@@ -26,6 +26,6 @@
   ],
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Arad1el"
+    "registry": "https://npm.pkg.github.com/@Arad1el"
   }
 }

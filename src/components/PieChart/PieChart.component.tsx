@@ -19,11 +19,11 @@ const PieChart = (props: PieChartProps) => {
     const sum = data.reduce((a, b) => a + b.value, 0);
     let rotation = -90;
     let segments: JSX.Element[] = [];
-    data.map((dataEntry) => {
+    data.map((dataEntry, index) => {
         const proportion = (dataEntry.value/sum);
         const dashAmount = circumference * proportion / 2;
         
-        segments.push(<circle className="SimplePieChart-segment"
+        segments.push(<circle className="SimplePieChart-segment" key={index}
             cx={x} cy={y} r={radius/2} strokeWidth={radius} fill="transparent"
             stroke={dataEntry.colour}
             strokeDasharray={`${dashAmount} ${circumference}`}

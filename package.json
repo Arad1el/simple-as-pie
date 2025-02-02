@@ -1,16 +1,16 @@
 {
-  "name": "@Arad1el/simple-as-pie",
-  "version": "1.0.1",
+  "name": "simple-as-pie",
+  "version": "1.0.2",
   "description": "A simple React SVG pie-chart component",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/@Arad1el/simple-as-pie.git"
+    "url": "git+https://github.com/Arad1el/simple-as-pie.git"
   },
   "keywords": ["rollup", "typescript", "react", "svg"],
   "bugs": {
-    "url": "https://github.com/@Arad1el/simple-as-pie/issues"
+    "url": "https://github.com/Arad1el/simple-as-pie/issues"
   },
-  "homepage": "https://github.com/@Arad1el/simple-as-pie#readme",
+  "homepage": "https://github.com/Arad1el/simple-as-pie#readme",
   "author": "Joseph Dowland",
   "license": "MIT",
   "private": false,
@@ -44,8 +44,5 @@
   },
   "files": [
     "dist"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@Arad1el"
-  }
+  ]
 }

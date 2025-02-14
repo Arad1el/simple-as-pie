@@ -56,7 +56,11 @@
       </ul>
     </li>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#in-depth">In Depth</li>
+      </ul>
+    </li>
     <li><a href="#interactive-demo">Interactive Demo</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -141,6 +145,25 @@ Create an SVG component, and call the component within it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### In Depth
+
+This library exports two members:
+
+* The "DataSet" interface
+* The "PieChart" component
+
+The DataSet represents the data in the pie chart, and has two properties:
+* Value - a number representing the value of the piece of data
+* Colour - a string representation of what the colour for that segment should be in the chart
+
+Since DataSet is an interface it can be extended to be used in other ways within your project.
+
+The PieChart component accepts the following properties:
+* Data - an array of DataSet objects
+* x - a number for the x co-ordinate of the centre of the Pie Chart
+* y - a number for the y co-ordinate of the centre of the Pie Chart
+* radius - a number representing the radius of the Pie Chart
+* backgroundColour - an optional string representation for the background colour of the chart (this is only important if you have some transparent segments)
 
 ## Interactive Demo
 
@@ -152,8 +175,8 @@ Create an SVG component, and call the component within it
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Enable background colour
-- [ ] Switch to paths rather than circle elements
+- [x] Enable background colour
+- [x] Switch to paths rather than circle elements
 - [ ] Enable hover functions
 
 See the [open issues](https://github.com/Arad1el/simple-as-pie/issues) for a full list of proposed features (and known issues).

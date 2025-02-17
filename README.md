@@ -56,7 +56,11 @@
       </ul>
     </li>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#in-depth">In Depth</li>
+      </ul>
+    </li>
     <li><a href="#interactive-demo">Interactive Demo</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -123,7 +127,10 @@ Construct the data for the segments
 const segmentData: DataSet[] = [
   {
     value: 24,
-    colour: "red"
+    colour: "red",
+    events: {
+      onClick: myOnClickHandler
+    }
   },
   {
     value: 76,
@@ -141,6 +148,26 @@ Create an SVG component, and call the component within it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### In Depth
+
+This library exports two members:
+
+* The "DataSet" interface
+* The "PieChart" component
+
+The DataSet represents the data in the pie chart, and has three properties:
+* value - a number representing the value of the piece of data
+* colour - a string representation of what the colour for that segment should be in the chart
+* events - an object that stores event handlers for the supported events. Currently these are Mouse, Pointer, Keyboard, Focus and Touch events.
+
+Since DataSet is an interface it can be extended to be used in other ways within your project.
+
+The PieChart component accepts the following properties:
+* data - an array of DataSet objects
+* x - a number for the x co-ordinate of the centre of the Pie Chart
+* y - a number for the y co-ordinate of the centre of the Pie Chart
+* radius - a number representing the radius of the Pie Chart
+* backgroundColour - an optional string representation for the background colour of the chart
 
 ## Interactive Demo
 
@@ -152,9 +179,10 @@ Create an SVG component, and call the component within it
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Enable background colour
-- [ ] Switch to paths rather than circle elements
-- [ ] Enable hover functions
+- [x] Enable background colour
+- [x] Switch to paths rather than circle elements
+- [x] Enable some functions
+- [ ] Enable all functions
 
 See the [open issues](https://github.com/Arad1el/simple-as-pie/issues) for a full list of proposed features (and known issues).
 
@@ -210,8 +238,8 @@ Project Link: [https://github.com/Arad1el/simple-as-pie/](https://github.com/Ara
 ## Acknowledgments
 
 * The initial version of this project was inspired be the logic of [Lea Verou](https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/)
-* Future development will probably lean on the logic of [David Gilbertson](https://david-gilbertson.medium.com/a-simple-pie-chart-in-svg-dbdd653b6936)
-* This readme template was adapated from [Othneil Drew's template](https://github.com/othneildrew/Best-README-Template)
+* Further development leans on the logic of [David Gilbertson](https://david-gilbertson.medium.com/a-simple-pie-chart-in-svg-dbdd653b6936)
+* This readme template was adapted from [Othneil Drew's template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

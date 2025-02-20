@@ -59,7 +59,7 @@
     <li><a href="#usage">Usage</a>
       <ul>
         <li><a href="#in-depth">In Depth</li>
-        <li><a href="#styling-&-animations">Styling & Animations</li>
+        <li><a href="#styling--animations">Styling & Animations</li>
       </ul>
     </li>
     <li><a href="#interactive-demo">Interactive Demo</a></li>

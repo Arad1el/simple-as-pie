@@ -59,6 +59,7 @@
     <li><a href="#usage">Usage</a>
       <ul>
         <li><a href="#in-depth">In Depth</li>
+        <li><a href="#styling-&-animations">Styling & Animations</li>
       </ul>
     </li>
     <li><a href="#interactive-demo">Interactive Demo</a></li>
@@ -168,6 +169,20 @@ The PieChart component accepts the following properties:
 * y - a number for the y co-ordinate of the centre of the Pie Chart
 * radius - a number representing the radius of the Pie Chart
 * backgroundColour - an optional string representation for the background colour of the chart
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Styling & Animations
+
+There are no styles or animations provided out of the box, but the following classes are on the various elements:
+
+* The Pie Chart component - a g (group) element with the class "SimplePieChart"
+* The background - a circle with the class "SimplePieChart-background-segment"
+* Each segment of the chart - a circle if there is only one, paths otherwise. They have the class "SimplePieChart-segment"
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 ## Interactive Demo
 
@@ -182,7 +197,7 @@ The PieChart component accepts the following properties:
 - [x] Enable background colour
 - [x] Switch to paths rather than circle elements
 - [x] Enable some functions
-- [ ] Enable all functions
+- [ ] Enable all appropriate functions
 
 See the [open issues](https://github.com/Arad1el/simple-as-pie/issues) for a full list of proposed features (and known issues).
 

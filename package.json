@@ -1,12 +1,17 @@
 {
   "name": "simple-as-pie",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple React SVG pie-chart component",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Arad1el/simple-as-pie.git"
   },
-  "keywords": ["rollup", "typescript", "react", "svg"],
+  "keywords": [
+    "rollup",
+    "typescript",
+    "react",
+    "svg"
+  ],
   "bugs": {
     "url": "https://github.com/Arad1el/simple-as-pie/issues"
   },
@@ -44,5 +49,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@types/react": "^19.0.10"
+  }
 }

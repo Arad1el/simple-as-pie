@@ -54,6 +54,7 @@ const PieChart = (props: PieChartProps) => {
             segments.push(<path className="SimplePieChart-segment" key={index}
                 d={`M 1 0 A 1 1 0 ${arcFlag} 1 ${endCoords.x} ${endCoords.y} L 0 0`}
                 fill={dataEntry.colour}
+                strokeWidth="1" stroke={dataEntry.colour}
                 style={{transform: `rotate(${rotation}deg)`, transformOrigin: `0 0`}}
                 {...dataEntry.events} />);
             

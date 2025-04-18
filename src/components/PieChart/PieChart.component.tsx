@@ -20,8 +20,6 @@ const PieChart = (props: PieChartProps) => {
     let rotation = -90;
     let segments: JSX.Element[] = [];
 
-    console.log(data);
-
     if (backgroundColour !== undefined) {
         segments.push(<circle className="SimplePieChart-background-segment" key="background"
             cx="0" cy="0" r={radius} fill={backgroundColour} />);

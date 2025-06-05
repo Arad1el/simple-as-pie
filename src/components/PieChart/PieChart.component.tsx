@@ -34,8 +34,6 @@ const PieChart = (props: PieChartProps) => {
         };
     }
 
-    let startAngle = 0;
-
     data.map((dataEntry, index) => {
         if (dataEntry.value === sum) {
             segments.push(<circle className="SimplePieChart-segment" key={index}
@@ -53,7 +51,31 @@ const PieChart = (props: PieChartProps) => {
                         fill={dataEntry.colour}
                         strokeWidth="1" stroke={dataEntry.colour}
                         style={{transform: `rotate(${rotation}deg)`, transformOrigin: `0 0`}}
-                        {...dataEntry.events}
+                        onAuxClick={dataEntry.events?.onAuxClick}
+                        onBlur={dataEntry.events?.onBlur}
+                        onClick={dataEntry.events?.onClick}
+                        onDoubleClick={dataEntry.events?.onDoubleClick}
+                        onFocus={dataEntry.events?.onFocus}
+                        onKeyDown={dataEntry.events?.onKeyDown}
+                        onKeyPress={dataEntry.events?.onKeyPress}
+                        onKeyUp={dataEntry.events?.onKeyUp}
+                        onMouseDown={dataEntry.events?.onMouseDown}
+                        onMouseEnter={dataEntry.events?.onMouseEnter}
+                        onMouseLeave={dataEntry.events?.onMouseLeave}
+                        onMouseMove={dataEntry.events?.onMouseMove}
+                        onMouseOut={dataEntry.events?.onMouseOut}
+                        onMouseUp={dataEntry.events?.onMouseUp}
+                        onPointerCancel={dataEntry.events?.onPointerCancel}
+                        onPointerDown={dataEntry.events?.onPointerDown}
+                        onPointerEnter={dataEntry.events?.onPointerEnter}
+                        onPointerLeave={dataEntry.events?.onPointerLeave}
+                        onPointerMove={dataEntry.events?.onPointerMove}
+                        onPointerOut={dataEntry.events?.onPointerOut}
+                        onPointerUp={dataEntry.events?.onPointerUp}
+                        onTouchCancel={dataEntry.events?.onTouchCancel}
+                        onTouchEnd={dataEntry.events?.onTouchEnd}
+                        onTouchMove={dataEntry.events?.onTouchMove}
+                        onTouchStart={dataEntry.events?.onTouchStart}
                 />);
             
             rotation += proportion * 360;

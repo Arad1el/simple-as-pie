@@ -38,7 +38,31 @@ const PieChart = (props: PieChartProps) => {
         if (dataEntry.value === sum) {
             segments.push(<circle className="SimplePieChart-segment" key={index}
                 cx="0" cy="0" r={radius} fill={dataEntry.colour}
-                {...dataEntry.events} />);
+                onAuxClick={dataEntry.events?.onAuxClick}
+                onBlur={dataEntry.events?.onBlur}
+                onClick={dataEntry.events?.onClick}
+                onDoubleClick={dataEntry.events?.onDoubleClick}
+                onFocus={dataEntry.events?.onFocus}
+                onKeyDown={dataEntry.events?.onKeyDown}
+                onKeyPress={dataEntry.events?.onKeyPress}
+                onKeyUp={dataEntry.events?.onKeyUp}
+                onMouseDown={dataEntry.events?.onMouseDown}
+                onMouseEnter={dataEntry.events?.onMouseEnter}
+                onMouseLeave={dataEntry.events?.onMouseLeave}
+                onMouseMove={dataEntry.events?.onMouseMove}
+                onMouseOut={dataEntry.events?.onMouseOut}
+                onMouseUp={dataEntry.events?.onMouseUp}
+                onPointerCancel={dataEntry.events?.onPointerCancel}
+                onPointerDown={dataEntry.events?.onPointerDown}
+                onPointerEnter={dataEntry.events?.onPointerEnter}
+                onPointerLeave={dataEntry.events?.onPointerLeave}
+                onPointerMove={dataEntry.events?.onPointerMove}
+                onPointerOut={dataEntry.events?.onPointerOut}
+                onPointerUp={dataEntry.events?.onPointerUp}
+                onTouchCancel={dataEntry.events?.onTouchCancel}
+                onTouchEnd={dataEntry.events?.onTouchEnd}
+                onTouchMove={dataEntry.events?.onTouchMove}
+                onTouchStart={dataEntry.events?.onTouchStart} />);
         }
         else {
             const proportion = (dataEntry.value/sum);

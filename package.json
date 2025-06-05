@@ -1,6 +1,6 @@
 {
   "name": "simple-as-pie",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A simple React SVG pie-chart component",
   "repository": {
     "type": "git",

@@ -160,6 +160,7 @@ The DataSet represents the data in the pie chart, and has three properties:
 * value - a number representing the value of the piece of data
 * colour - a string representation of what the colour for that segment should be in the chart
 * events - an object that stores event handlers for the supported events. Currently these are Mouse, Pointer, Keyboard, Focus and Touch events.
+  * Each event takes the React version of the event (e.g. React.MouseEvent) as the first parameter, and the DataSet object as the second
 
 Since DataSet is an interface it can be extended to be used in other ways within your project.
 

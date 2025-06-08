@@ -16,7 +16,10 @@ export type Coordinates = {
 
 const PieChart = (props: PieChartProps) => {
     const {data, x, y, radius, backgroundColour} = props;
-    const sum = data.reduce((a, b) => a + b.value, 0);
+
+    //Only allow for data with a positive value
+    const validData = data.filter((data) => data.value > 0);
+    const sum = validData.reduce((a, b) => a + b.value, 0);
     let rotation = -90;
     let segments: JSX.Element[] = [];
 
@@ -51,7 +54,7 @@ const PieChart = (props: PieChartProps) => {
         return props;
     };
 
-    data.map((dataEntry, index) => {
+    validData.map((dataEntry, index) => {
         if (dataEntry.value === sum) {
             segments.push(<circle className="SimplePieChart-segment" key={index}
                 cx="0" cy="0" r={radius} fill={dataEntry.colour}

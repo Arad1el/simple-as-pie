@@ -120,7 +120,7 @@ Within your React app's directory, install the plugin via npm or yarn
 
 Import the module into your component
 ```
-import { PieChart, DataSet } from 'simple-as-pie';
+import { PieChart, type DataSet } from 'simple-as-pie';
 ```
 
 Construct the data for the segments

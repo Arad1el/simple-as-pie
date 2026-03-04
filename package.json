@@ -1,10 +1,10 @@
 {
   "name": "simple-as-pie",
-  "version": "2.2.6",
+  "version": "2.2.7",
   "description": "A simple React SVG pie-chart component",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arad1el/simple-as-pie.git"
+    "url": "https://github.com/Arad1el/simple-as-pie.git"
   },
   "keywords": [
     "rollup",

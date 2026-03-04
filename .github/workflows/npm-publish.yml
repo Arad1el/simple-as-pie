@@ -13,14 +13,16 @@ jobs:
     permissions:
       id-token: write
       contents: read
-      packages: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
       #- run: yarn test
-      - run: yarn publish --provenance
+      - name: Publish via npm
+        run: npm publish --provenance --access public
